@@ -9,7 +9,7 @@ export const Player = ({link,title}) => {
     title={title}
     frameBorder=""
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
+    allowFullScreen
 ></iframe>
   )
 }
