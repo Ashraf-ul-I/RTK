@@ -3,6 +3,7 @@ import SideBar from '../components/SideBar'
 import PostContainer from '../components/PostContainer/PostContainer'
 
 const HomePage = () => {
+  
   return (
     <section className="wrapper">
     <SideBar/>
