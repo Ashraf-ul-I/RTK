@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import Description from "../video/Description";
 import Player from "../video/Player";
 import RelatedVideos from "../video/related/RelatedVideos";
-import { useGetVideoQuery, useGetVideosQuery } from "../../features/api/apiSlice";
+import { useGetVideoQuery } from "../../features/api/apiSlice";
 import PlayerLoader from '../ui/loaders/PlayerLoader'
 import DescriptionLoader from '../ui/loaders/DescriptionLoader'
 import Error from "../ui/Error";
@@ -18,12 +18,12 @@ export default function Video() {
     }
 
     if(!isLoading && isError){
-        content= <Error message="There was an Error"/>
+        content= <Error message="There was an Error " title={"from Video.js"}/>
     }
 
     if(!isLoading && !isError && video?.id){
         content= (<>
-          <Player link={video.link} title={video.title}/>
+          <Player link={video.link} title={video?.title}/>
           <Description video={video}/>
         </>)
     }
@@ -36,10 +36,10 @@ export default function Video() {
                         {content}
                     </div>
 
-                    {video?.id ? <RelatedVideos id={video.id} title={video.title} /> : isLoading?<><RelatedVideoLoader/>
+                    {video?.id ? <RelatedVideos id={video.id} title={video?.title} /> : isLoading?<><RelatedVideoLoader/>
                         <RelatedVideoLoader/>
                         <RelatedVideoLoader/>
-                        </>:<Error/>}
+                        </>:<Error title={'from Video.js pages'}/>}
                 </div>
             </div>
         </section>
