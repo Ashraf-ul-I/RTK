@@ -26,6 +26,15 @@
       "rating": 4,
       "featured": true,
       "id": 4
+    },
+    {
+      "name": "There's Treasure Inside Hardcover ",
+      "author": "Jon Collins-Black ",
+      "thumbnail": "https://m.media-amazon.com/images/I/817CzOa+LIL._SY466_.jpg",
+      "price": "44.96",
+      "rating": "4",
+      "featured": true,
+      "id": 7
     }
   ]
 }
